@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 class Solution{
+    //Convert a sentence into its equivalent mobile numeric keypad sequence
 	public:
 		string numericValue(string arr[], string str){
 			string output;
