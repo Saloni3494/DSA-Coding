@@ -2,11 +2,22 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-class Solution{
+/*Input : a[] = {2, 1, 3}, 
+        b[] = { 7, 8, 9 }, 
+        k = 10. 
+Output : Yes
+Permutation  a[] = { 1, 2, 3 } and b[] = { 9, 8, 7 } 
+satisfied the condition a[i] + b[i] >= K.
+
+Input : a[] = {1, 2, 2, 1}, 
+        b[] = { 3, 3, 3, 4 }, 
+        k = 5. 
+Output : No*/
+class SS_sum_of_permuted_array{
 	public:
 		bool isPossible(int a[], int b[], int n, int k){
 			sort(a, a+n); //increasing;
-			sort(b, b+n, greater<int>());
+			sort(b, b+n, greater<int>()); //decreasing
 			
 			for(int i=0;i<n;i++){
 				if(a[i]+b[i]<k){
@@ -24,7 +35,7 @@ int main(){
     int k = 10;
     int n = sizeof(a) / sizeof(a[0]);
 	
-	Solution obj;
+	SS_sum_of_permuted_array obj;
 	cout<<obj.isPossible(a,b,n,k);
 	
 }
