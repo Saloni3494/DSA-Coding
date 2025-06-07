@@ -9,7 +9,7 @@ public:
         for (char ch : str) {
             freq[ch]++;
         }
-        for (auto& pair : freq) {
+        for (auto pair : freq) {
             if (pair.second > 1) {
                 cout << "'" << pair.first << "' count is " << pair.second << endl;
             }
