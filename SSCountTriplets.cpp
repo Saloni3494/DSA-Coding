@@ -2,6 +2,11 @@
 #include <algorithm>
 
 using namespace std;
+// Function to count triplets with sum less than given value
+// This function returns count of triplets with sum less than
+//Example: Given an array {5, 1, 3, 4, 7} and sum = 12,
+// it will return 4 as the triplets are:
+
 int countTriplets(int arr[], int n, int sum)
 {
     // Sort input array
